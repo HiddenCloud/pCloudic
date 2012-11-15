@@ -1,0 +1,37 @@
+name: pCloudic
+author: HiddenCloud
+main: src.Plugin
+version: 0.1
+commands:
+   ckick:
+      description: Kicks a player through crashing him.
+      usage: /<command> [player]
+      permission: <plugin name>.ping
+      permission-message: You don't have <permission> 
+   drunk:
+      description: Gives the player a drunk effect.
+      usage: /<command>
+      permission: <plugin name>.ping
+      permission-message: You don't have <permission> 
+   list:
+      description: Shows all the online users.
+      usage: /<command>
+      permission: <plugin name>.ping
+      permission-message: You don't have <permission> 
+   tpto:
+      description: Teleport to a player instantly.
+      usage: /<command> playername
+      permission: <plugin name>.ping
+      permission-message: You don't have <permission> 
+   aquaman:
+      description: Makes the player able to stay underwater forever.
+      usage: /<command>
+      permission: <plugin name>.ping
+      permission-message: You don't have <permission> 
+   ping:
+      description: Pings the server.
+      usage: /<command>
+      permission: <plugin name>.ping
+      permission-message: You don't have <permission> 
+
+
