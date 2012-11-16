@@ -1,5 +1,6 @@
 package src;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Server;
 
 public class Util{
@@ -11,7 +12,12 @@ public class Util{
 		p = plugin;
 	}
 	public static void broadcast(String string) {
-	l.broadcastMessage(string);	
+	l.broadcastMessage(ChatColor.GOLD +
+			"[" + ChatColor.BOLD +
+			"Server" + ChatColor.GOLD +
+			"]: " + ChatColor.WHITE + string);	
 	}
 
+	
+	
 }

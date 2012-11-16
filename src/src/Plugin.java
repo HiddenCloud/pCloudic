@@ -7,13 +7,12 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.craftbukkit.entity.CraftPlayer;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 public class Plugin extends JavaPlugin {
+	private AutoAnnouncer AA;
 	static boolean hasBeenEnabled;
     static boolean aquaman;
     static boolean aquaman2;
@@ -30,9 +29,13 @@ public Plugin(){
 	public void onEnable() {
 		hasBeenEnabled = true;
 	getLogger().info("pCloudic has been enabled.");	
-	getServer().getPluginManager().registerEvents(new OnLogin(this), this);
+	getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 	getServer().getPluginManager().registerEvents(new BlockListener(this), this);
+	getServer().getPluginManager().registerEvents(new EntityListener(this), this);
 	Util u = new Util(super.getServer(), this);
+	Thread r = new Thread(new AutoAnnouncer(this));
+	r.start();
+	
 
 
 	}
