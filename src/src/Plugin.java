@@ -70,7 +70,7 @@ public Plugin(){
 			            return true;
 		           } 
 		
-		if(s.equalsIgnoreCase("drunk")){
+		if(s.equalsIgnoreCase("poke")){
 
 			if(args.length == 0){
 				Player p3 = (Player) sender;
