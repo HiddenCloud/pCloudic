@@ -74,8 +74,7 @@ public Plugin(){
 
 			if(args.length == 0){
 				Player p3 = (Player) sender;
-				p3.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 500, 999));
-				sender.sendMessage("You're starting to feel dizzy...");
+				p3.sendMessage(ChatColor.BLUE + sender.getName()+" poked you.");
 			}
 
 			if(args.length == 1){
@@ -85,8 +84,7 @@ public Plugin(){
 					sender.sendMessage(ChatColor.RED + args[0] + " is not online!");
 				}
 				
-				p2.sendMessage(ChatColor.ITALIC  + "You are now drunk!");
-				p2.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 500, 999));
+				p2.sendMessage(ChatColor.BLUE + sender.getName()+" poked you.");
 			}
 			
 			return true;
